@@ -72,9 +72,9 @@ function flipCoin(x) {
 
     let pick = x;
 
-    let result = document.getElementById('flip');
     let choice = document.getElementById('choice');
-    let game = document.getElementById('result');
+    let flip = document.getElementById('flip');
+    let result = document.getElementById('result');
 
     let randNum = Math.ceil(Math.random() * 2);
 
@@ -87,17 +87,17 @@ function flipCoin(x) {
     }
 
     let status;
-    if (choice == face) {
+    if (face === pick) {
         status = "Win"
     } else {
         status = "Loss"
     }
 
-    result.innerText = face;
-
     choice.innerText = pick;
 
-    game.innerText = status;
+    flip.innerText = face;
+
+    result.innerText = status;
 
     console.log(randNum);
 
